@@ -10,9 +10,7 @@ function chooseVerb(noun) {
     const initial = noun[0];
     const sameInitialVerbs = verbs.filter(verb => verb[0] === initial);
     if (sameInitialVerbs.length > 0) {
-        if (Math.random() < 0.6) {
-            return sameInitialVerbs[randInt(sameInitialVerbs.length)];
-        }
+        return sameInitialVerbs[randInt(sameInitialVerbs.length)];
     }
     return verbs[randInt(verbs.length)];
 }
