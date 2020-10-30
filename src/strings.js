@@ -225,6 +225,7 @@ const nouns = [
     'structure',
     'suite',
     'superstructure',
+    'tower',
     'turf',
     'turret',
     'villa',
