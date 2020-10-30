@@ -72,6 +72,7 @@ const verbs = [
     'hyperbeam',
     'immolate',
     'intimidate',
+    'jilt',
     'kill',
     'knock off',
     'knock off ',
