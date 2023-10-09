@@ -1,12 +1,12 @@
-const { nouns, verbs } = require('./strings');
+import { nouns, verbs } from './strings';
 
-function verbTheNoun() {
+export function verbTheNoun() {
     const noun = nouns[randInt(nouns.length)];
     const verb = chooseVerb(noun);
     return `${verb} the ${noun}`;
 }
 
-function chooseVerb(noun) {
+function chooseVerb(noun: string) {
     const initial = noun[0];
     const sameInitialVerbs = verbs.filter(verb => verb[0] === initial);
     if (sameInitialVerbs.length > 0) {
@@ -15,8 +15,6 @@ function chooseVerb(noun) {
     return verbs[randInt(verbs.length)];
 }
 
-function randInt(nExclusive) {
-    return Math.floor(Math.random()*nExclusive);
+function randInt(nExclusive: number) {
+    return Math.floor(Math.random() * nExclusive);
 }
-
-module.exports = verbTheNoun;

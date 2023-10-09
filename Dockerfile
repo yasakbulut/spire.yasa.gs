@@ -1,13 +1,13 @@
-FROM node:latest
+FROM oven/bun
 
 WORKDIR /app
 
 COPY package.json ./
-COPY yarn.lock ./
+COPY bun.lockb ./
 
-RUN yarn install --frozen-lockfile
+RUN bun install --frozen-lockfile
 
 COPY src .
 
 EXPOSE 8080
-CMD ["node", "index.js"]
+CMD ["bun", "index.ts"]
